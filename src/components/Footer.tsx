@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="grid grid-cols-3 bg-white pt-20">
         <div></div>
         <div className='bg-white flex flex-row justify-between'>
-            <div className=''><GoodboyLogo /></div>
+            <div className='hidden md:block'><GoodboyLogo /></div>
             <div className='flex flex-col'>
                 <SubTitle>Nadácia Good boy</SubTitle>
                 <a href=''>link</a>

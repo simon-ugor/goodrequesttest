@@ -120,15 +120,15 @@ const FirstPage = ({ continueClick }: Props) => {
 
               <div className="mt-6 flex flex-row">
 
-                <SelectButton id='1' onClick={toggleClick} dir='ltr' className={"rounded-s-3xl flex flex-col justify-between p-5 " + toggleStyle[1]}>
-                  <Wallet />
-                  <p className="font-semibold text-l">Chcem finančne prispieť konkrétnemu útulku</p>
+                <SelectButton id='1' onClick={toggleClick} dir='ltr' className={"rounded-s-3xl flex flex-col justify-center p-5 md:justify-between" + toggleStyle[1]}>
+                  <div className="hidden md:block"><Wallet /></div>
+                  <p className="font-semibold text-s lg:text-base">Chcem finančne prispieť konkrétnemu útulku</p>
                 </SelectButton>
 
                 <SelectButton onClick={toggleClick} id='2' dir='rtl' className={"rounded-s-3xl " + toggleStyle[2]}>
-                  <div dir='ltr' className="w-full h-full flex flex-col justify-between p-5">
-                    <Paw />
-                    <p className="font-semibold text-l">Chcem finančne prispieť celej nadácii</p>
+                  <div dir='ltr' className="w-full h-full flex flex-col justify-center p-5 md:justify-between">
+                    <div className="hidden md:block"><Paw /></div>
+                    <p className="font-semibold text-s lg:text-base">Chcem finančne prispieť celej nadácii</p>
                   </div>
                 </SelectButton>
 

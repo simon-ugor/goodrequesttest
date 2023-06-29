@@ -34,12 +34,12 @@ function App() {
 
       <Header />
 
-      <div className='h-full w-full grid grid-cols-4'>
+      <div className='h-full w-full grid grid-cols-3 lg:grid-cols-4'>
         <div></div>
           <div className="border-b-2">
             {page}
           </div>
-        <div className="pl-10 flex justify-center items-center border-b-2">
+        <div className="hidden pl-10 justify-center items-center border-b-2 lg:flex">
           <img src={DogImage} alt='Dog Image' />
         </div>
         <div></div>
