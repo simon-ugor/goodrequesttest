@@ -120,12 +120,12 @@ const FirstPage = ({ continueClick }: Props) => {
 
               <div className="mt-6 flex flex-row">
 
-                <SelectButton id='1' onClick={toggleClick} dir='ltr' className={"rounded-s-3xl flex flex-col justify-center p-5 md:justify-between" + toggleStyle[1]}>
+                <SelectButton id='1' onClick={toggleClick} dir='ltr' className={`rounded-s-3xl flex flex-col justify-center p-5 md:justify-between ${toggleStyle[1]}`}>
                   <div className="hidden md:block"><Wallet /></div>
                   <p className="font-semibold text-s lg:text-base">Chcem finančne prispieť konkrétnemu útulku</p>
                 </SelectButton>
 
-                <SelectButton onClick={toggleClick} id='2' dir='rtl' className={"rounded-s-3xl " + toggleStyle[2]}>
+                <SelectButton onClick={toggleClick} id='2' dir='rtl' className={`rounded-s-3xl ${toggleStyle[2]}`}>
                   <div dir='ltr' className="w-full h-full flex flex-col justify-center p-5 md:justify-between">
                     <div className="hidden md:block"><Paw /></div>
                     <p className="font-semibold text-s lg:text-base">Chcem finančne prispieť celej nadácii</p>
@@ -141,7 +141,7 @@ const FirstPage = ({ continueClick }: Props) => {
 
               <div className="h-16 mt-2">
 
-                <select onChange={(e) => dropdownChange(e)} className={"select w-full max-w-full h-full bg-white focus:border-none " + redBorders.shelter}>
+                <select onChange={(e) => dropdownChange(e)} className={`select w-full max-w-full h-full bg-white focus:border-none ${redBorders.shelter}`}>
                   <option disabled selected>Útulok - Vyberte útulok zo zoznamu</option>
                   {allShelters && allShelters.map((s) => {
                     return <option key={s.id}>{s.name}</option>
@@ -161,7 +161,7 @@ const FirstPage = ({ continueClick }: Props) => {
                 <PriceButton onClick={priceButtonClick} id='30' className={priceButtonStyle[4]}>30 €</PriceButton>
                 <PriceButton onClick={priceButtonClick} id='50' className={priceButtonStyle[5]}>50 €</PriceButton>
                 <PriceButton onClick={priceButtonClick} id='100' className={priceButtonStyle[6]}>100 €</PriceButton>
-                <PriceInput onClick={priceInputClick} className={"border-2 " + priceInput.style + " " + redBorders.priceInput}>
+                <PriceInput onClick={priceInputClick} className={`border-2 ${priceInput.style} ${redBorders.priceInput}`}>
                   <input onChange={(e) => setPriceInput({value: e.currentTarget.value, style: priceInput.style})} value={priceInput.value=="" ? "" : priceInput.value} className='w-4/6 bg-transparent ml-2 text-black text-center border-b-2 font-bold outline-none'></input>
                   <div className='w-2/6 h-full flex justify-center items-center'><SubTitle>€</SubTitle></div>
                 </PriceInput>
